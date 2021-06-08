@@ -1,15 +1,18 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import { StackActions } from '@react-navigation/routers';
 import CoinsScreen from './CoinsScreen';
+import CoinDetailScreen from './CoinDetailScreen';
 
-const stack = createStackNavigator();
+const Stack = createStackNavigator();
 
 const CoinsStack = () => {
   return (
-    <stack.Navigator>
-      <stack.Screen name="Coins" component={CoinsScreen} />
-    </stack.Navigator>
+    <Stack.Navigator>
+      <Stack.Screen 
+        name="Coins" 
+        component={CoinsScreen} />
+      <Stack.Screen name="CoinDetail" component={CoinDetailScreen} />
+    </Stack.Navigator>
   );
 }
 
